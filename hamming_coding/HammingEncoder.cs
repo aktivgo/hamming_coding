@@ -46,20 +46,22 @@ namespace hamming_coding
 
             StringBuilder encode = new StringBuilder(InitEncode(inputStr, n, k));
 
-            for (int i = 0; i < n + k; i += (int) Math.Pow(2, i))
+            int pow = 0;
+            for (int i = 0; i < n + k; i += (int) Math.Pow(2, pow++))
             {
                 int sum = 0;
-                for (int j = 0; j < n + k; j += i + 1)
+                for (int j = i; j < n + k; j += i + 2)
                 {
                     if (j % 2 == 1)
                     {
                         continue;
                     }
 
-                    sum += int.Parse(encode[i].ToString());
+                    sum += int.Parse(encode[j].ToString());
                 }
 
-                encode[i] = Convert.ToChar(sum % 2);
+                encode.Remove(i, 1);
+                encode.Insert(i, sum % 2);
             }
 
             return encode.ToString();
