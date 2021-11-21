@@ -4,3 +4,9 @@ C:\Users\Владислав\OneDrive - vyatsu\Учеба\3 курс\5 семес
 C:\Users\Владислав\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.csproj.CoreCompileInputs.cache
 C:\Users\Владислав\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.exe
 C:\Users\Владислав\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.pdb
+C:\Users\Aktiv\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\bin\Debug\hamming_coding.exe
+C:\Users\Aktiv\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\bin\Debug\hamming_coding.pdb
+C:\Users\Aktiv\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.csproj.AssemblyReference.cache
+C:\Users\Aktiv\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.csproj.CoreCompileInputs.cache
+C:\Users\Aktiv\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.exe
+C:\Users\Aktiv\OneDrive - vyatsu\Учеба\3 курс\5 семестр\Теория информации и кодирования\Lab12-13\hamming_coding\hamming_coding\obj\Debug\hamming_coding.pdb

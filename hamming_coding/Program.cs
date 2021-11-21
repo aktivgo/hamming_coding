@@ -6,8 +6,11 @@ namespace hamming_coding
     {
         public static void Main(string[] args)
         {
-            string input = Console.ReadLine();
-            Console.WriteLine(HammingEncoder.Encode(input));
+            /*string input = Console.ReadLine();
+            string encode = HammingEncoder.Encode(input);
+            Console.WriteLine(encode);*/
+            string decode = HammingDecoder.Decode("110");
+            Console.WriteLine(decode);
         }
     }
 }
