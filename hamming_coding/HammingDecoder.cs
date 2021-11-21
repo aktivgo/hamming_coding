@@ -6,6 +6,11 @@ namespace hamming_coding
 {
     public static class HammingDecoder
     {
+        /// <summary>
+        /// Переводит из двоичной в десятичную сс
+        /// </summary>
+        /// <param name="binary"></param>
+        /// <returns></returns>
         private static int ToDecimal(string binary)
         {
             int number = int.Parse(binary);
@@ -14,16 +19,20 @@ namespace hamming_coding
             int pow = 0;
             while (number != 0)
             {
-                result += (int)(number % 10 * Math.Pow(2, pow));
+                result += (int)(number % 10 * Math.Pow(2, pow++));
                 number /= 10;
             }
 
             return result;
         }
 
-        public static string Decode(string inputStr)
+        /// <summary>
+        /// Считает четность единиц
+        /// </summary>
+        /// <param name="inputStr"></param>
+        /// <returns></returns>
+        private static string CalculateError(string inputStr)
         {
-            StringBuilder decode = new StringBuilder(inputStr);
             string error = "";
 
             int pow = 0;
@@ -41,17 +50,57 @@ namespace hamming_coding
                 error += sum % 2;
             }
 
+            return error;
+        }
+
+        /// <summary>
+        /// Удаляет контрольные байты
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        private static string DeleteControlBytes(string input)
+        {
+            string decode = "";
+
+            int pow = 0;
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (i + 1 != (int)Math.Pow(2, pow))
+                {
+                    decode += input[i];
+                }
+                else
+                {
+                    pow++;
+                }
+            }
+
+            return decode;
+        }
+
+        /// <summary>
+        /// Декодирует входное двоичное сообщение
+        /// </summary>
+        /// <param name="inputStr"></param>
+        /// <returns></returns>
+        public static string Decode(string inputStr)
+        {
+            StringBuilder input = new StringBuilder(inputStr);
+
+            string error = CalculateError(inputStr);
             char[] arr = error.ToCharArray();
             Array.Reverse(arr);
             error = new string(arr);
 
-            int errorIndex = ToDecimal(error);
+            int errorIndex = ToDecimal(error) - 1;
 
-            decode[errorIndex] = decode[errorIndex] == '1' ? '0' : '1';
-
-            // Удаление контрольных байт
-
-            return decode.ToString();
+            if (errorIndex != -1)
+            {
+                input[errorIndex] = input[errorIndex] == '1' ? '0' : '1';
+            }
+            
+            string decode = DeleteControlBytes(input.ToString());
+            return decode;
         }
     }
 }

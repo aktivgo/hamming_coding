@@ -51,7 +51,7 @@ namespace hamming_coding
         }
 
         /// <summary>
-        /// Кодирует исходную строку
+        /// Кодирует исходное двоичное сообщение
         /// </summary>
         /// <param name="inputStr"></param>
         /// <returns></returns>
